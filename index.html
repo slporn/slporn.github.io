@@ -45,7 +45,7 @@
   <div class="video-container">
     <div class="post">
       <div class="video-player">
-        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>
+        <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
       </div>
       <div class="side-bar">
         <div class="side-icon profile-follow">
@@ -118,7 +118,7 @@
     </div>
     <div class="post">
       <div class="video-player">
-        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/TruthfulActiveCicada.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>
+        <video src="https://thumbs2.redgifs.com/TruthfulActiveCicada.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
       </div>
       <div class="side-bar">
         <div class="side-icon profile-follow">
@@ -191,7 +191,7 @@
     </div>
     <div class="post">
       <div class="video-player">
-        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/KnowledgeableThirdCrayfish.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>
+        <video src="https://thumbs2.redgifs.com/KnowledgeableThirdCrayfish.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
       </div>
       <div class="side-bar">
         <div class="side-icon profile-follow">
@@ -305,6 +305,14 @@ function playPauseVideo() {
 }
 
 // And you would kick this off where appropriate with:
+
+function playallVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = false;
+    });
+}
 
 function playallVideo() {
     let videos = document.querySelectorAll("video");

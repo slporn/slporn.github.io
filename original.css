@@ -45,7 +45,7 @@ a {
   scroll-snap-align: center;
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (min-width: 800px) {
   .video-container {
     height: 659px;
     width: 330px;

@@ -37,10 +37,10 @@
 </head>
 <body>
   <div class="container">
-    <div class="alert">
+<!--     <div class="alert">
       <span class="closebtn" onclick="this.parentElement.style.display='none';playallVideo(); playPauseVideo();">&times;</span>
       This is an alert box.
-    </div>
+    </div> -->
 
   <div class="video-container">
     <div class="post">
@@ -65,7 +65,7 @@
         </div>
 
         <div class="side-icon share-btn">
-          <i class="fa fa-share share-icon"></i>
+          <i class="fa fa-share share-icon" onclick="unmuteVideo();"></i>
           <p class="share-number">10</p>
         </div>
 
@@ -303,6 +303,7 @@ function playPauseVideo() {
         }
     });
 }
+playPauseVideo();
 
 // And you would kick this off where appropriate with:
 
@@ -319,6 +320,14 @@ function playallVideo() {
     videos.forEach((video) => {
         // We can only control playback without insteraction if video is mute
         video.muted = false;
+    });
+}
+
+function unmuteVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = !video.muted;
     });
 }
 </script>

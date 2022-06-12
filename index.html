@@ -7,15 +7,45 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="original.css">
+  <style type="text/css">
+    /* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+  </style>
   <title></title>
 </head>
 <body>
   <div class="container">
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';playallVideo(); playPauseVideo();">&times;</span>
+      This is an alert box.
+    </div>
 
   <div class="video-container">
     <div class="post">
       <div class="video-player">
-        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" muted playsinline webkit-playsinline></video>
+        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>
       </div>
       <div class="side-bar">
         <div class="side-icon profile-follow">
@@ -88,7 +118,7 @@
     </div>
     <div class="post">
       <div class="video-player">
-        <video src="https://thumbs2.redgifs.com/TruthfulActiveCicada.mp4#t=0" autoplay="autoplay" muted loop="" class="post-video" playsinline webkit-playsinline></video>
+        <video poster="https://wallpapercave.com/wp/wp4273083.jpg" src="https://thumbs2.redgifs.com/TruthfulActiveCicada.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>
       </div>
       <div class="side-bar">
         <div class="side-icon profile-follow">
@@ -246,12 +276,12 @@ function playPauseVideo() {
     let videos = document.querySelectorAll("video");
     videos.forEach((video) => {
         // We can only control playback without insteraction if video is mute
-        video.muted = true;
+        // video.muted = true;
         // Play is a promise so we need to check we have it
         let playPromise = video.play();
         if (playPromise !== undefined) {
             playPromise.then((_) => {
-              video.muted = false;
+              
                 let observer = new IntersectionObserver(
                     (entries) => {
                         entries.forEach((entry) => {
@@ -275,7 +305,14 @@ function playPauseVideo() {
 }
 
 // And you would kick this off where appropriate with:
-playPauseVideo();
+
+function playallVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = false;
+    });
+}
 </script>
 
 

@@ -65,7 +65,7 @@
         </div>
 
         <div class="side-icon share-btn">
-          <i class="fa fa-share share-icon" onclick="unmuteVideo();"></i>
+          <i class="fa fa-share share-icon" onclick="playPauseVideo();"></i>
           <p class="share-number">10</p>
         </div>
 
@@ -298,22 +298,15 @@ function playPauseVideo() {
                     },
                     { threshold: 0.2 }
                 );
+                video.muted = !video.muted;
                 observer.observe(video);
             });
         }
     });
 }
-playPauseVideo();
+// playPauseVideo();
 
 // And you would kick this off where appropriate with:
-
-function playallVideo() {
-    let videos = document.querySelectorAll("video");
-    videos.forEach((video) => {
-        // We can only control playback without insteraction if video is mute
-        video.muted = false;
-    });
-}
 
 function playallVideo() {
     let videos = document.querySelectorAll("video");

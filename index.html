@@ -36,13 +36,13 @@
   <title></title>
 </head>
 <body>
-  <div class="container">
+  <!-- <div class="container"> -->
 <!--     <div class="alert">
       <span class="closebtn" onclick="this.parentElement.style.display='none';playallVideo(); playPauseVideo();">&times;</span>
       This is an alert box.
     </div> -->
 
-  <div class="video-container">
+  <div class="video-container" id="container">
     <div class="post">
       <div class="video-player">
         <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
@@ -189,7 +189,7 @@
         <img src="https://www.nicepng.com/png/detail/329-3297274_compact-disc-cd-comments-disc-icon-png.png" alt="" class="disc-logo-img">
       </div>
     </div>
-    <div class="post">
+    <div class="post" id="5">
       <div class="video-player">
         <video src="https://thumbs2.redgifs.com/KnowledgeableThirdCrayfish.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
       </div>
@@ -264,7 +264,7 @@
     </div>
 
   </div>
-</div>
+<!-- </div> -->
 
 </body>
 </html>
@@ -324,12 +324,36 @@ function unmuteVideo() {
     });
 }
 
-window.scrollTo(0,1)
+</script>
+
+<script type="text/javascript">
+  function scrolling() {
+    var scroll_distance = document.querySelector('.video-container')
+    var last_distance = $('.post:last').offset().top
+    console.log(scroll_distance.scrollTop)
+    console.log('it is scrolling');
+    console.log(last_distance)
+
+    if ( last_distance == 0 ) {
+        var numItems = $('.post').length;
+        if(numItems <= 20){
+           $( ".video-container" ).append( "<div class='post'>New Row</div>" );
+        }
+   }
+  }
+  var page = document.getElementById('container');
+  var test = document.getElementById('5');
+
+  // console.log(test.scrollTop);
+  var distance = $('.post').offset().top;
+  console.log(distance);
+
+  page.addEventListener('scroll', scrolling);
 </script>
 
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var allText =[];
     var allTextLines = [];
     var Lines = [];
@@ -345,4 +369,4 @@ window.scrollTo(0,1)
     console.log(allText);
     console.log(Lines);
 
-</script>
+</script> -->

@@ -88,13 +88,13 @@ function unmuteVideo() {
     console.log(last_distance)
 
     
-    if ( last_distance == 0 ) {
+    if ( last_distance <= 0 ) {
         var numItems = $('.post').length;
         if(numItems <= 20){
            $( ".video-container" ).append( '<div class="post">'
       + '<video src="https://thumbs2.redgifs.com/StingyVigorousEmu.mp4#t=0" loop="" class="post-video" playsinline webkit-playsinline></video>'
       + '</div>');
-        }
+        };
    }
    scrolling()
 

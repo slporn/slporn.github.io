@@ -6,306 +6,68 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="original.css">
+  <link rel="stylesheet" href="new.css">
   <style type="text/css">
-    /* The alert message box */
-.alert {
-  padding: 20px;
-  background-color: #f44336; /* Red */
-  color: white;
-  margin-bottom: 15px;
-}
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black;
-}
+    /* CSS test */
   </style>
   <title></title>
 </head>
 <body>
-  <!-- <div class="container"> -->
-<!--     <div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';playallVideo(); playPauseVideo();">&times;</span>
-      This is an alert box.
-    </div> -->
 
-  <div class="video-container" id="container">
-    <div class="post">
-      <div class="video-player">
-        <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
+  <div class='video-container' id='container'>
+    <div class='post'>
+      <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
+    </div>
+    <div class='post'>
+      <video src="https://thumbs2.redgifs.com/StingyVigorousEmu.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
+    </div>
+    <div class='post'>
+      <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
+    </div>
+    <div class='post'>
+      <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
+    </div>
+    <div class="side-bar">
+      <div class="side-icon profile-follow">
+        <div class="profile-logo">
+          <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="profile-logo-img" alt="">
+        </div>
+        <i class="fa fa-plus"></i>
       </div>
-      <div class="side-bar">
-        <div class="side-icon profile-follow">
-          <div class="profile-logo">
-            <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="profile-logo-img" alt="">
-          </div>
-          <i class="fa fa-plus"></i>
-        </div>
-        <div class="side-icon like-btn">
-          <i class="fa fa-heart-o like-icon"></i>
-          <p class="like-number">789</p>
-        </div>
-
-        <div class="side-icon comment-btn">
-          <i class="fa fa-comment comment-icon"></i>
-          <p class="comment-number">184</p>
-        </div>
-
-        <div class="side-icon share-btn">
-          <i class="fa fa-share share-icon" onclick="unmuteVideo();"></i>
-          <p class="share-number">10</p>
-        </div>
-
+      <div class="side-icon like-btn">
+        <i class="fa fa-heart-o like-icon"></i>
+        <p class="like-number">like</p>
       </div>
-      <div class="post-comments ">
-        <span class="close-comment">&times;</span>
-        <div class="post-comments-area">
-          <div class="post-comment">
-            <div class="post-comment-user">
-              <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="post-comment-user-img">
-            </div>
-            <div class="post-comment-content">
-              <div class="post-comment-user-name verfied">
-                <a href="https://instagram.com/sahilverma.dev">sahilverma.dev</a>
-                <i class="fa fa-check post-comment-user-verified"></i>
-              </div>
-              <div class="post-comment-user-msg">
-                Follow me on instagram
-              </div>
-            </div>
-            <div class="post-comment-like-btn">
-              <i class="fa fa-heart-o post-comment-like-icon"></i>
-              <p class="post-comment-like-number">9</p>
-            </div>
-          </div>
-        </div>
-        <div class="post-comment-input">
-          <input type="text" name="" class="post-comment-text" placeholder="Enter somethings good...." />
-          <button class="post-comment-send"><i class="fa fa-send send-btn"></i></button>
-        </div>
-      </div>
-      <div class="post-footer">
-        <div class="username verfied">
-          <a href="https://instagram.com/sahilverma.dev" class="username-link">sahilverma.dev</a>
-          <i class="fa fa-check verfied-icon"></i>
-        </div>
-        <p class="post-description">
-          This is a Tik Tok Clone with working Video Player, Like button and comment. But comments dosen't store in any backend.
-        </p>
 
-        <div class="music-name">
-          <i class="fa fa-music"></i>
-          <marquee behavior="" direction="" class="song-name">Tungevaag, Raaban - Bad Boy </marquee>
-        </div>
-
+      <div class="side-icon comment-btn">
+        <i class="fa fa-comment comment-icon"></i>
+        <p class="comment-number">comment</p>
       </div>
-      <div class="disc-logo">
-        <img src="https://www.nicepng.com/png/detail/329-3297274_compact-disc-cd-comments-disc-icon-png.png" alt="" class="disc-logo-img">
+
+      <div class="side-icon share-btn">
+        <i class="fa fa-share share-icon" onclick="unmuteVideo();"></i>
+        <p class="share-number">vol</p>
       </div>
     </div>
-    <div class="post">
-      <div class="video-player">
-        <video src="https://thumbs2.redgifs.com/TruthfulActiveCicada.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
-      </div>
-      <div class="side-bar">
-        <div class="side-icon profile-follow">
-          <div class="profile-logo">
-            <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="profile-logo-img" alt="">
-          </div>
-          <i class="fa fa-plus"></i>
-        </div>
-        <div class="side-icon like-btn">
-          <i class="fa fa-heart-o like-icon"></i>
-          <p class="like-number">789</p>
-        </div>
-
-        <div class="side-icon comment-btn">
-          <i class="fa fa-comment comment-icon"></i>
-          <p class="comment-number">184</p>
-        </div>
-
-        <div class="side-icon share-btn">
-          <i class="fa fa-share share-icon"></i>
-          <p class="share-number">10</p>
-        </div>
-
-      </div>
-      <div class="post-comments ">
-        <span class="close-comment">&times;</span>
-        <div class="post-comments-area">
-          <div class="post-comment">
-            <div class="post-comment-user">
-              <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="post-comment-user-img">
-            </div>
-            <div class="post-comment-content">
-              <div class="post-comment-user-name verfied">
-                <a href="https://instagram.com/sahilverma.dev">sahilverma.dev</a>
-                <i class="fa fa-check post-comment-user-verified"></i>
-              </div>
-              <div class="post-comment-user-msg">
-                Follow me on instagram
-              </div>
-            </div>
-            <div class="post-comment-like-btn">
-              <i class="fa fa-heart-o post-comment-like-icon"></i>
-              <p class="post-comment-like-number">9</p>
-            </div>
-          </div>
-        </div>
-        <div class="post-comment-input">
-          <input type="text" name="" class="post-comment-text" placeholder="Enter somethings good...." />
-          <button class="post-comment-send"><i class="fa fa-send send-btn"></i></button>
-        </div>
-      </div>
-      <div class="post-footer">
-        <div class="username verfied">
-          <a href="https://instagram.com/sahilverma.dev" class="username-link">sahilverma.dev</a>
-          <i class="fa fa-check verfied-icon"></i>
-        </div>
-        <p class="post-description">
-          This is a Tik Tok Clone with working Video Player, Like button and comment. But comments dosen't store in any backend.
-        </p>
-
-        <div class="music-name">
-          <i class="fa fa-music"></i>
-          <marquee behavior="" direction="" class="song-name">Tungevaag, Raaban - Bad Boy </marquee>
-        </div>
-
-      </div>
-      <div class="disc-logo">
-        <img src="https://www.nicepng.com/png/detail/329-3297274_compact-disc-cd-comments-disc-icon-png.png" alt="" class="disc-logo-img">
-      </div>
-    </div>
-    <div class="post" id="5">
-      <div class="video-player">
-        <video src="https://thumbs2.redgifs.com/KnowledgeableThirdCrayfish.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline muted></video>
-      </div>
-      <div class="side-bar">
-        <div class="side-icon profile-follow">
-          <div class="profile-logo">
-            <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="profile-logo-img" alt="">
-          </div>
-          <i class="fa fa-plus"></i>
-        </div>
-        <div class="side-icon like-btn">
-          <i class="fa fa-heart-o like-icon"></i>
-          <p class="like-number">789</p>
-        </div>
-
-        <div class="side-icon comment-btn">
-          <i class="fa fa-comment comment-icon"></i>
-          <p class="comment-number">184</p>
-        </div>
-
-        <div class="side-icon share-btn">
-          <i class="fa fa-share share-icon"></i>
-          <p class="share-number">10</p>
-        </div>
-
-      </div>
-      <div class="post-comments ">
-        <span class="close-comment">&times;</span>
-        <div class="post-comments-area">
-          <div class="post-comment">
-            <div class="post-comment-user">
-              <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="post-comment-user-img">
-            </div>
-            <div class="post-comment-content">
-              <div class="post-comment-user-name verfied">
-                <a href="https://instagram.com/sahilverma.dev">sahilverma.dev</a>
-                <i class="fa fa-check post-comment-user-verified"></i>
-              </div>
-              <div class="post-comment-user-msg">
-                Follow me on instagram
-              </div>
-            </div>
-            <div class="post-comment-like-btn">
-              <i class="fa fa-heart-o post-comment-like-icon"></i>
-              <p class="post-comment-like-number">9</p>
-            </div>
-          </div>
-        </div>
-        <div class="post-comment-input">
-          <input type="text" name="" class="post-comment-text" placeholder="Enter somethings good...." />
-          <button class="post-comment-send"><i class="fa fa-send send-btn"></i></button>
-        </div>
-      </div>
-      <div class="post-footer">
-        <div class="username verfied">
-          <a href="https://instagram.com/sahilverma.dev" class="username-link">sahilverma.dev</a>
-          <i class="fa fa-check verfied-icon"></i>
-        </div>
-        <p class="post-description">
-          This is a Tik Tok Clone with working Video Player, Like button and comment. But comments dosen't store in any backend.
-        </p>
-
-        <div class="music-name">
-          <i class="fa fa-music"></i>
-          <marquee behavior="" direction="" class="song-name">Tungevaag, Raaban - Bad Boy </marquee>
-        </div>
-
-      </div>
-      <div class="disc-logo">
-        <img src="https://www.nicepng.com/png/detail/329-3297274_compact-disc-cd-comments-disc-icon-png.png" alt="" class="disc-logo-img">
-      </div>
-    </div>
-
   </div>
-<!-- </div> -->
 
 </body>
+
 </html>
 
-<script src="template.js"></script>
+<script src="template_new.js"></script>
 
 <script type="text/javascript">
-function playPauseVideo() {
+
+// And you would kick this off where appropriate with:
+
+function playallVideo() {
     let videos = document.querySelectorAll("video");
     videos.forEach((video) => {
         // We can only control playback without insteraction if video is mute
-        // video.muted = true;
-        // Play is a promise so we need to check we have it
-        let playPromise = video.play();
-        if (playPromise !== undefined) {
-            playPromise.then((_) => {
-              
-                let observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (
-                                entry.intersectionRatio !== 1 &&
-                                !video.paused
-                            ) {
-                                video.pause();
-                            } else if (video.paused) {
-                                video.play();
-
-                            }
-                        });
-                    },
-                    { threshold: 0.2 }
-                );
-                observer.observe(video);
-            });
-        }
+        video.muted = false;
     });
 }
-playPauseVideo();
-
-// And you would kick this off where appropriate with:
 
 function unmuteVideo() {
     let videos = document.querySelectorAll("video");
@@ -325,86 +87,17 @@ function unmuteVideo() {
     console.log('it is scrolling');
     console.log(last_distance)
 
+    
     if ( last_distance == 0 ) {
         var numItems = $('.post').length;
         if(numItems <= 20){
-          playPauseVideo();
-          $( ".video-container" ).append( '<div class="post">'
-      + '<div class="video-player">'
-      + '  <video src="https://thumbs2.redgifs.com/ExtrasmallKindheartedBaleenwhale.mp4#t=0" autoplay="" loop="" class="post-video" playsinline webkit-playsinline></video>'
-      + '</div>'
-      + '<div class="side-bar">'
-      + '  <div class="side-icon profile-follow">'
-      + '    <div class="profile-logo">'
-      + '      <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="profile-logo-img" alt="">'
-      + '    </div>'
-      + '    <i class="fa fa-plus"></i>'
-      + '  </div>'
-      + '  <div class="side-icon like-btn">'
-      + '    <i class="fa fa-heart-o like-icon"></i>'
-      + '    <p class="like-number">789</p>'
-      + '  </div>'
-
-      + '  <div class="side-icon comment-btn">'
-      + '    <i class="fa fa-comment comment-icon"></i>'
-      + '    <p class="comment-number">184</p>'
-      + '  </div>'
-
-      + '  <div class="side-icon share-btn">'
-      + '    <i class="fa fa-share share-icon"></i>'
-      + '    <p class="share-number">10</p>'
-      + '  </div>'
-
-      + '</div>'
-      + '<div class="post-comments ">'
-      + '  <span class="close-comment">&times;</span>'
-      + '  <div class="post-comments-area">'
-      + '    <div class="post-comment">'
-      + '      <div class="post-comment-user">'
-      + '        <img src="https://assets.codepen.io/2483051/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1636466200&width=80" class="post-comment-user-img">'
-      + '      </div>'
-      + '      <div class="post-comment-content">'
-      + '        <div class="post-comment-user-name verfied">'
-      + '          <a href="https://instagram.com/sahilverma.dev">sahilverma.dev</a>'
-      + '          <i class="fa fa-check post-comment-user-verified"></i>'
-      + '        </div>'
-      + '        <div class="post-comment-user-msg">'
-      + '          Follow me on instagram'
-      + '        </div>'
-      + '      </div>'
-      + '      <div class="post-comment-like-btn">'
-      + '        <i class="fa fa-heart-o post-comment-like-icon"></i>'
-      + '        <p class="post-comment-like-number">9</p>'
-      + '      </div>'
-      + '    </div>'
-      + '  </div>'
-      + '  <div class="post-comment-input">'
-      + '    <input type="text" name="" class="post-comment-text" placeholder="Enter somethings good...." />'
-      + '    <button class="post-comment-send"><i class="fa fa-send send-btn"></i></button>'
-      + '  </div>'
-      + '</div>'
-      + '<div class="post-footer">'
-      + '  <div class="username verfied">'
-      + '    <a href="https://instagram.com/sahilverma.dev" class="username-link">sahilverma.dev</a>'
-      + '    <i class="fa fa-check verfied-icon"></i>'
-      + '  </div>'
-      + '  <p class="post-description">'
-      + "    This is a Tik Tok Clone with working Video Player, Like button and comment. But comments dosen't store in any backend."
-      + '  </p>'
-
-      + '  <div class="music-name">'
-      + '    <i class="fa fa-music"></i>'
-      + '    <marquee behavior="" direction="" class="song-name">Tungevaag, Raaban - Bad Boy </marquee>'
-      + '  </div>'
-
-      + '</div>'
-      + '<div class="disc-logo">'
-      + '  <img src="https://www.nicepng.com/png/detail/329-3297274_compact-disc-cd-comments-disc-icon-png.png" alt="" class="disc-logo-img">'
-      + '</div>'
+           $( ".video-container" ).append( '<div class="post">'
+      + '<video src="https://thumbs2.redgifs.com/StingyVigorousEmu.mp4#t=0" loop="" class="post-video" playsinline webkit-playsinline></video>'
       + '</div>');
         }
    }
-   playPauseVideo()
+   scrolling()
+
   }
   var page = document.getElementById('container');
   var test = document.getElementById('5');
@@ -417,21 +110,28 @@ function unmuteVideo() {
 </script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
-<!-- <script type="text/javascript">
-    var allText =[];
-    var allTextLines = [];
-    var Lines = [];
+  
+<script type="text/javascript">
+function scrolling() {
+  var videos = gsap.utils.toArray('video')
+  videos.forEach(function(video, i) {
+    ScrollTrigger.create({
+      trigger: video,
+      scroller: '.video-container',
+      start: 'top center',
+      end: 'bottom center',
+      markers: false,
+      onEnter: () => video.play(),
+      onEnterBack: () => video.play(),
+      onLeave: () => video.pause(),
+      onLeaveBack: () => video.pause(),
+    });
 
-    var txtFile = new XMLHttpRequest();
-    txtFile.open("file:///C:/Users/ken/Desktop/tiktok/test.txt");
-    txtFile.onreadystatechange = function()
-    {
-        allText = txtFile.responseText;
-        allTextLines = allText.split('\n');
-    };
-    console.log(allTextLines);
-    console.log(allText);
-    console.log(Lines);
+  })
+}
+scrolling()
 
-</script> -->
+</script>
